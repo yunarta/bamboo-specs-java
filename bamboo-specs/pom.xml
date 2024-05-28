@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.atlassian.bamboo</groupId>
+        <artifactId>bamboo-specs-parent</artifactId>
+        <version>9.2.0</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.mobilesolutionworks</groupId>
+    <artifactId>specky</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.atlassian.bamboo</groupId>
+            <artifactId>bamboo-specs-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.bamboo</groupId>
+            <artifactId>bamboo-specs</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.groovy/groovy-all -->
+        <dependency>
+            <groupId>org.apache.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>4.0.21</version>
+            <type>pom</type>
+        </dependency>
+
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- run 'mvn test' to perform offline validation of the plan -->
+    <!-- run 'mvn -Ppublish-specs' to upload the plan to your Bamboo server -->
+</project>
